@@ -31,11 +31,6 @@ mongoose.connection.once('open', (err) => {
 require("./routes/main")(app);
 require("./routes/pins")(app);
 
-
-app.listen(3000, function(err) {
-  if(err) {
-    console.log(err);
-  } else {
-    console.log("connected to port 3000");
-  }
-})
+app.listen(process.env.PORT || 3000, function() {
+  console.log("Server has started successfully");
+});
