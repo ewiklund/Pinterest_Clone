@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const PinSchema = new Schema({
+const PinSchema = new mongoose.Schema({
   title: String,
   desc: String,
   username: String,
